@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="addtocart.css">
+    <script src="https://kit.fontawesome.com/9459b328e4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- navigation bar html starts  -->
+        <header>
+            <div class="wrapper-navbar">
+                <nav>
+                    <input type="checkbox" class="checkbox" id="show-search">
+                    <input type="checkbox" class="checkbox" id="show-burger">
+                    <!-- <input type="checkbox" class="checkbox" id="show-cart"> -->
+                    <div class="content">
+                        <div class="logo"><a href="index.html"><img src="LogoImages/logo.png" alt="Logo"></a></div>
+                        <div class="small-logo"><a href=""><img src="LogoImages/iconlogo.png" alt="Logo"></a></div>
+                        <div class="elements">
+                            <ul class="links">
+                                <li><a href="">Home</a></li>
+                                <li id="dropdown"><a href="">Books<span class="arrow">&#9662;</span></a></li>
+                                <li><a href="">About</a></li>
+                                <li><a href="">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-icons">
+                        <div class="burgerIcon"><label for="show-burger" id="burger-icon">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                        </div>
+                        <div class="searchIcon"><label for="show-search" id="magnifyingGlass">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+                        <div class="cartIcon">
+                                <a href="" id="showCart"><i class="fa-solid fa-cart-shopping"></i> <span>Cart</span></a>
+                                <div class="cart-product-num" id="count">0</div>
+                            </label>
+                        </div>
+                        <div class="accountIcon">
+                            <a href="account.html" target="_blank"><i class="fa-solid fa-user"></i> <span>Account</span></a>
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <div class="search-form">
+                            <form action="">
+                                <input type="search" id="searchBox" placeholder="Search...">
+                                <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- image slider  -->
+        <div class="slider">
+            <div class="list">
+                <div class="listItem">
+                    <img src="img/image1.jpg" alt="">
+                </div>
+                <div class="listItem">
+                    <img src="img/image2.jpg" alt="">
+                </div>
+                <div class="listItem">
+                    <img src="img/image3.jpg" alt="">
+                </div>
+                <div class="listItem">
+                    <img src="img/image4.jpg" alt="">
+                </div>
+                <div class="listItem">
+                    <img src="img/image5.jpg" alt="">
+                </div>
+            </div>
+            <div class="browseBooks">
+                <div class="browseBooksElements">
+                    <h1>Find books of your favourite category.
+                    </h1>
+                    <button>Browse Books &#8594</button>
+                </div>
+            </div>
+            <div class="slider-opacity-screen"></div>
+            <div class="buttons">
+                <button id="prev"> < </button>
+                <button id="next"> > </button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        
+
+        <!-- get started heading  -->
+        <div class="getStarted">
+            <h1>Get Started, Top Picks</h1>
+            <div id="headingLine"></div>
+        </div>
+        
+            
+        
+        <!-- top picks book container  -->
+        <div class="book-container"></div>
+        
+        <!-- cart div  -->
+        <div class="addToCart">
+            <div class="cartHeader">
+                <div class="yourCart">Your Cart</div>
+                <div class="closeCart"><i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="cartProducts">
+                <!-- Products  -->
+                <div class="cart-product-list">
+        
+        
+                    <div class="emptyCart" style="color:#2f2f2f; font-size: 30px;">
+                        Oops! Your cart is empty!
+                    </div>
+        
+                </div>
+            </div>
+        
+        
+            <div class="subtotal-container">
+                <div class="subtotal">Total:</div>
+                <div class="totalPrice">Rs. 0.00</div>
+            </div>
+            <div class="cartCheckout">
+                <button>Checkout</button>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+
+    
+
+    <div id="blackScreen"></div>
+    <div id="goToTopBtn" title="Go to Top" onclick="topFunction()">
+        <span id="goToTopElement"><i class="fa-solid fa-arrow-up"></i></span>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
