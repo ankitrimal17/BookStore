@@ -21,6 +21,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+// books that are shown in top picks
 const book = [
   {
     id: 0,
@@ -113,6 +114,8 @@ const book = [
     price: 800.0,
   },
 ];
+
+//javascript to show the stored books in top picks
 const categories = [
   ...new Set(
     book.map((item) => {
@@ -143,6 +146,7 @@ document.querySelector(".book-container").innerHTML = categories
   })
   .join("");
 
+//javascript for making add to cart functional
 var cart = [];
 
 function addtocart(a) {
@@ -154,46 +158,68 @@ function delElement(a) {
   displaycart();
 }
 
+// Add an item to the cart and update localStorage
+function addtocart(a) {
+  cart.push({ ...categories[a] });
+  displaycart();
+
+  // Store the updated cart in localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Remove an item from the cart and update localStorage
+function delElement(a) {
+  cart.splice(a, 1);
+  displaycart();
+
+  // Update the cart in localStorage after removing an item
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Display cart items and calculate the total
 function displaycart() {
   let j = 0,
     total = 0;
   document.getElementById("count").innerHTML = cart.length;
-  if (cart.length == 0) {
-    document.querySelector(
-      ".cart-product-list"
-    ).innerHTML = `<div class="emptyCart" style="color:#2f2f2f; font-size: 30px;">
-                        Oops! Your cart is empty!
-                    </div>`;
-    document.querySelector(".totalPrice").innerHTML = "Rs. " + 0 + ".00";
+  if (cart.length === 0) {
+    document.querySelector(".cart-product-list").innerHTML = `
+      <div class="emptyCart" style="color:#2f2f2f; font-size: 30px;">
+        Oops! Your cart is empty!
+      </div>`;
+    document.querySelector(".totalPrice").innerHTML = "Rs. 0.00";
   } else {
     document.querySelector(".cart-product-list").innerHTML = cart
       .map((items) => {
         var { image, title, price } = items;
         total = total + price;
         document.querySelector(".totalPrice").innerHTML =
-          "Rs. " + total + ".00";
-        return (
-          `<div class="cart-product-detail">
-            <div class="cartBookImage ">
-                <img src="${image}" alt="${title}">
+          "Rs. " + total.toFixed(2); // Use toFixed to format the total
+        return `
+          <div class="cart-product-detail">
+            <div class="cartBookImage">
+              <img src="${image}" alt="${title}">
             </div>
             <div class="book-detail productitem">
-                <div class="cartBookName">
-                    ${title}
-                </div>
-                <div class="cartBookPrice">
-                    <p>Rs. ${price}</p>
-                </div>
+              <div class="cartBookName">
+                ${title}
+              </div>
+              <div class="cartBookPrice">
+                <p>Rs. ${price.toFixed(2)}</p>
+              </div>
             </div>
-            <div class="remove-from-cart ">` +
-          "<i class='fa-solid fa-trash' onclick='delElement(" +
-          j++ +
-          ")'></i></div></div>"
-        );
+            <div class="remove-from-cart">
+              <i class="fa-solid fa-trash" onclick="delElement(${j++})"></i>
+            </div>
+          </div>`;
       })
       .join("");
   }
 }
+
+// Initialize the cart array from localStorage when the page loads
+const storedCart = localStorage.getItem("cart");
+cart = storedCart ? JSON.parse(storedCart) : [];
+displaycart();
 
 // animation to show cart div when clicked on cart option in navbar
 document.getElementById("showCart").addEventListener("click", function (event) {
