@@ -11,8 +11,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', Verdana;
-    background: rgb(138, 109, 247);
-    background: linear-gradient(120deg, rgba(138, 109, 247, 0.29744397759103647) 35%, rgba(0, 212, 255, 0.3310574229691877) 100%);
+    /* background: rgb(138, 109, 247);
+    background: linear-gradient(120deg, rgba(138, 109, 247, 0.29744397759103647) 35%, rgba(0, 212, 255, 0.3310574229691877) 100%); */
+    background-color: #ddd1ff;
     overflow-x: hidden;
     height: 100vh;
     
@@ -23,6 +24,7 @@ body {
 #wrapper {
     width: 100%;
     margin: 0px auto;
+    
 }
 /* navigation bar css start  */
 .wrapper-navbar {
@@ -390,6 +392,11 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 
+
+
+
+
+
 /*GetStarted heading*/
 .getStarted{
     margin: 0px 4px 40px 4px ;
@@ -413,6 +420,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 /* book container "Top Picks" started  */
+
+
 .book-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -421,6 +430,7 @@ input[type="search"]::-webkit-search-cancel-button {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    
 }
 
 .sub-container {
@@ -485,6 +495,192 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #704bf7;
 }
 
+
+
+
+#belowContainer{
+    width: 100vw;
+    background-color: #fff;
+}
+
+
+/*Genre heading*/
+.browse-genre {
+    margin: 0 4px;
+}
+
+.browse-genre h1 {
+    font-size: 28px;
+    color: #2f2c38;
+    padding: 16px;
+    text-align: center;
+}
+
+/* genre container css starts  */
+.genre-container{
+    margin-bottom: 80px;
+}
+.genre-container .genre-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 90%;
+    padding: 16px 4px 26px 4px;
+    margin: 26px auto;
+    /* box-shadow: 4px 4px 10px #87878775; */
+}
+.genre-container .genre-list .genre-item{
+    background-color: #ffffff;
+    color: #8A6DF7;
+    border: 1px solid #8A6DF7;
+    margin: 0 4px 12px 4px;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 2px #2f2c3866;
+    text-align: center;
+    font-size: 20px;
+    transition: ease .2s;
+}
+.genre-container .genre-list .genre-item:hover{
+    /* background-color: #8A6DF7;
+    color: #ffffff; */
+    transform: translateY(4px);
+    box-shadow: 0px 0px 2px #2f2c3866;
+
+}
+
+.giftcard-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 auto 46px auto;
+    padding: 16px;
+}
+.giftcard-container .giftcard-image {
+    width: calc(92% - 2px);
+    height: auto;
+    padding: 8px;
+    margin: auto;
+    
+}
+.giftcard-container .giftcard-image img{
+    width: calc(92% - 2px);
+    box-shadow: 4px 4px 36px #0000004d;
+    border-radius: 16px 0 0 16px;
+}
+
+.giftcard-container .giftcard-text{
+    padding: 8px;
+    margin: 0 auto;
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.giftcard-container .giftcard-text .giftcard-info{
+    padding: 8px;
+}
+.giftcard-container .giftcard-text h1{
+    font-size: 46px;
+    margin-bottom: 16px;
+}
+.giftcard-container .giftcard-text p{
+    font-size: 22px;
+    line-height: 36px;
+    margin-bottom: 20px;
+
+}
+.giftcard-container .giftcard-text .giftcard-button{
+    height: 3em;
+    width: 12em;
+    background-color: #8A6DF7;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 6px 1px #2f2c3866;
+    font-size: 17px;
+    transition: ease .2s;
+    cursor: pointer;
+}
+.giftcard-container .giftcard-text .giftcard-button:hover{
+    transform: translateY(6px);
+    box-shadow: 0px 0px 1px #2f2c3866;
+}
+
+
+
+
+/* newsletter css */
+
+.newsletter-container {
+    padding: 46px 0;
+    height: auto;
+    width: 100%;
+    background-color: #8A6DF7;
+    
+}
+.newsletter{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(90% - 60px);
+    margin: auto;
+}
+.newsletter .subscribe-text{
+    color: #ffffff;
+    width: 50%;
+    padding: 16px;
+}
+.newsletter .newsletter-email{
+    width: 50%;
+    padding: 16px;
+}
+.newsletter .subscribe-text h1{
+    font-size: 36px;
+    margin-bottom: 26px;
+}
+.newsletter .subscribe-text p{
+    font-size: 16px;
+}
+.newsletter .newsletter-email .newsletter-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+.newsletter .newsletter-email .newsletter-form input{
+    width: 100%;
+    height: 46px;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 26px;
+}
+.newsletter .newsletter-email .newsletter-form button{
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    color: #8A6DF7;
+    font-size: 17px;
+    padding: 0 8px;
+    width: 50%;
+    height: 46px;
+    cursor: pointer;
+}
+.newsletter .newsletter-email .newsletter-form button:hover{
+    
+    color: #ffffff;
+    background-color: #8A6DF7;
+}
 
 
 
@@ -628,6 +824,34 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 }
+
+@media screen and (max-width: 729px){
+    .newsletter{
+        flex-direction: column;
+    }
+    .newsletter .subscribe-text{
+        width: 100%;
+    }
+    .newsletter .newsletter-email{
+        width: 100%;
+    }
+    .newsletter .newsletter-email .newsletter-form button{
+        width: 100%;
+    }
+
+    .giftcard-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .giftcard-container .giftcard-image{
+        margin-bottom: 16px;
+    }
+    .giftcard-container .giftcard-text .giftcard-button{
+        width: 100%;
+    }
+}
+
+
 
 @media screen and (max-width: 558px) {
 

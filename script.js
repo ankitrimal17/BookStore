@@ -113,6 +113,24 @@ const book = [
     title: "The Stranger",
     price: 800.0,
   },
+  {
+    id: 13,
+    image: "BookImages/It-Ends-With-Us.png",
+    title: "It Ends With Us",
+    price: 800.0,
+  },
+  {
+    id: 12,
+    image: "BookImages/Hooked.png",
+    title: "Hooked",
+    price: 1120.0,
+  },
+  {
+    id: 12,
+    image: "BookImages/The-Secret-History.png",
+    title: "The Secret History",
+    price: 1120.0,
+  },
 ];
 
 //javascript to show the stored books in top picks
@@ -144,7 +162,9 @@ document.querySelector(".book-container").innerHTML = categories
               </div>`
     );
   })
+
   .join("");
+adjustGenrePosition();
 
 //javascript for making add to cart functional
 var cart = [];
@@ -278,3 +298,12 @@ window.onresize = function (event) {
   reloadSlider();
 };
 //slider javascript ends
+
+//to make genre div's margin top automatically set
+function adjustGenrePosition() {
+  const bookContainerHeight =
+    document.getElementById("bookContainer").offsetHeight;
+  document.getElementById("belowContainer").style.marginTop = `${
+    bookContainerHeight + 120
+  }px`; // Set the margin dynamically
+}
