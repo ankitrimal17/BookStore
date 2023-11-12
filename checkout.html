@@ -238,6 +238,48 @@
             border-radius: 8px;
         }   
         
+
+
+        .footer{
+            width: 100vw;
+            height: auto;
+            background-color: #6947c3;
+            margin-top: 16px;
+        }
+        .footer .copyright{
+            display: flex;
+            flex-wrap: wrap;
+            border-top: 1px solid #b3a1e1;
+            padding: 16px 0 36px 0;
+
+        }
+        .footer .copyright .footer-copyright{
+            width: 80%;
+            margin: auto;
+        }
+        .footer .copyright .footer-copyright{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            color: #fcfcfc;
+            font-size: 14px;
+            margin: 16px auto;
+        }
+        .footer .copyright .footer-copyright a{
+            padding-left: 16px;
+            text-decoration: underline;
+            color: #fcfcfc;
+        }
+        .footer .copyright .footer-copyright a:hover{
+            text-decoration: none;
+        }
+
+
+
+
+        /* responsive  */
         
         @media screen and (max-width: 1170px) {
             #your-cart-books, #checkout-wrapper .book-details #checkout-total-price{
@@ -337,6 +379,17 @@
             </form>
             <div class="place-order">
                 <button type="submit">Place Order</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copyright">
+            <div class="footer-copyright">
+                <p>Copyright © Grantha Bookstore, 2023</p>
+                <a href="">Refund Policy</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms of Service</a>
+                <a href="">Shipping Policy</a>
             </div>
         </div>
     </div>
