@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | Grantha Bookstore</title>
+    <link rel="icon" href="LogoImages/iconlogo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="addtocart.css">
+    <link rel="stylesheet" href="account.css">
+    <script src="https://kit.fontawesome.com/9459b328e4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- navigation bar html starts  -->
+        <header>
+            <div class="wrapper-navbar">
+                <nav>
+                    <input type="checkbox" class="checkbox" id="show-search">
+                    <input type="checkbox" class="checkbox" id="show-burger">
+                    <!-- <input type="checkbox" class="checkbox" id="show-cart"> -->
+                    <div class="content">
+                        <div class="logo"><a href="index.html"><img src="LogoImages/logo.png" alt="Logo"></a></div>
+                        <div class="small-logo"><a href=""><img src="LogoImages/iconlogo.png" alt="Logo"></a></div>
+                        <div class="elements">
+                            <ul class="links">
+                                <li><a href="index.html">Home</a></li>
+                                <li id="dropdown"><a href="">Books<span class="arrow">&#9662;</span></a></li>
+                                <li><a href="">About</a></li>
+                                <li><a href="">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-icons">
+                        <div class="burgerIcon"><label for="show-burger" id="burger-icon">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                        </div>
+                        <div class="searchIcon"><label for="show-search" id="magnifyingGlass">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+                        <div class="cartIcon">
+                            <a href="" id="showCart"><i class="fa-solid fa-cart-shopping"></i> <span>Cart</span></a>
+                            <div class="cart-product-num" id="count">0</div>
+                            </label>
+                        </div>
+                        <div class="accountIcon">
+                            <a href="account.html" target="_blank"><i class="fa-solid fa-user"></i>
+                                <span>Account</span></a>
+                        </div>
+                    </div>
+                    <div class="search-box">
+                        <div class="search-form">
+                            <form action="">
+                                <input type="search" id="searchBox" placeholder="Search...">
+                                <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+
+        <!-- account div  -->
+        <main>
+            <div class="container">
+                <div class="formBtn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <div id="indicator">
+                    </div>
+                </div>
+        
+                <form id="loginForm">
+                    <label for="lUsername">Username</label>
+                    <input type="text" placeholder="Username" id="lUsername">
+                    <label for="lPassword">Password</label>
+                    <input type="password" placeholder="Password" id="lPassword">
+                    <div class="rememberMe">
+                        <input type="checkbox" name="" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="button" id="loginButton">
+                        Login</button><br>
+                    <a href="">Forgot Password</a>
+                </form>
+                <form id="registerForm">
+                    <label for="rUsername">Username</label>
+                    <input type="text" placeholder="Username" id="rUsername">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email" id="email">
+                    <label for="rPassword">Password</label>
+                    <input type="password" placeholder="Password" id="rPassword">
+                    <button type="submit" class="button" id="registerButton">
+                        Register</button>
+                </form>
+        
+            </div>
+        </main>
+
+
+
+
+        
+
+
+        <!-- top picks book container  -->
+
+        <div class="book-container" id="bookContainer" style="display: none;">
+            <!-- books in the homepage (from javascript) -->
+        </div>
+
+
+
+
+
+
+
+
+        <!-- cart div  -->
+        <div class="addToCart">
+            <div class="cartHeader">
+                <div class="yourCart">Your Cart</div>
+                <div class="closeCart"><i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="cartProducts">
+                <!-- Products  -->
+                <div class="cart-product-list">
+
+
+                    <div class="emptyCart" style="color:#2f2f2f; font-size: 30px;">
+                        Oops! Your cart is empty!
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="subtotal-container">
+                <div class="subtotal">Total:</div>
+                <div class="totalPrice">Rs. 0.00</div>
+            </div>
+            <div class="cartCheckout">
+                <button onclick="window.open('checkout.html', '_blank')">Checkout</button>
+            </div>
+        </div>
+
+
+
+        <div id="belowContainer">
+            <!-- newsletter  -->
+            <div class="newsletter-container">
+                <div class="newsletter">
+                    <div class="subscribe-text">
+                        <h1>Subscribe to our Newsletter</h1>
+                        <p>Submit your email address be the first to know about new arrivals,
+                            exclusive offers and updates from Grantha Bookstore.
+                        </p>
+                    </div>
+                    <div class="newsletter-email">
+                        <form action="" class="newsletter-form">
+                            <input type="email" placeholder="Your Email Address">
+                            <button type="submit">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="">Genre</a></li>
+                            <li><a href="">Gift Card</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Physical Location</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Help</h4>
+                        <ul>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Shipping</a></li>
+                            <li><a href="">Return</a></li>
+                            <li><a href="">Order Status</a></li>
+                            <li><a href="">Payment Options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <p>Phone: 01- 4991234</p>
+                        <p>Mobile: 9812345678</p>
+                        <p>Email: contact@grantha.com</p>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="LogoImages/logo.png" alt="">
+                            </a>
+                        </div>
+                        <p>For authentic books, sourced directly from global publishers.</p>
+                        <div class="socials">
+                            <a href="" id="icons-socials"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="" id="icons-socials"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="" id="icons-socials"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="" id="icons-socials"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="footer-copyright">
+                        <p>Copyright © Grantha Bookstore, 2023</p>
+                        <a href="">Refund Policy</a>
+                        <a href="">Privacy Policy</a>
+                        <a href="">Terms of Service</a>
+                        <a href="">Shipping Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="blackScreen"></div>
+    <div id="goToTopBtn" title="Go to Top" onclick="topFunction()">
+        <span id="goToTopElement"><i class="fa-solid fa-arrow-up"></i></span>
+    </div>
+
+
+    <script>
+        var loginForm = document.getElementById("loginForm");
+        var registerForm = document.getElementById("registerForm");
+        var indicator = document.getElementById("indicator");
+
+        function register() {
+            registerForm.style.transform = "translateX(0px)";
+            loginForm.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+
+        function login() {
+            registerForm.style.transform = "translateX(500px)";
+            loginForm.style.transform = "translateX(500px)";
+            indicator.style.transform = "translateX(-188px)";
+        }
+
+
+        
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

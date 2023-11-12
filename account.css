@@ -1,0 +1,142 @@
+.container {
+    height: 500px;
+    width: 400px;
+    background-color: #fcfcfc;
+    position: relative;
+    top: 130px;
+    margin: 0 auto 200px auto;
+    padding: 20px 0px;
+    box-shadow: 1px 1px 6px #7F759A;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .formBtn {
+    padding: 0px 0px 0px 8px;
+}
+
+.container .formBtn span {
+    display: grid;
+    place-content: center;
+    font-weight: bold;
+    color: #000000;
+    height: 40px;
+    margin: 30px auto 0 auto;
+    cursor: pointer;
+    width: 180px;
+}
+
+.container .formBtn #indicator {
+    height: 4px;
+    width: 140px;
+    background-color: #8A6DF7;
+    margin-top: 30px;
+    position: absolute;
+    top: 56px;
+    right: 34px;
+    border-radius: 16px;
+    transition: transform 0.7s;
+
+}
+
+.container form label {
+    display: flex;
+    text-align: left;
+    font-weight: normal;
+    color: #000000;
+    position: absolute;
+    left: 40px;
+    cursor: pointer;
+}
+
+.formBtn {
+    display: flex;
+    text-align: center;
+
+}
+
+.container form {
+    max-width: 100%;
+    padding: 0px 30px;
+    position: absolute;
+    top: 130px;
+    transition: transform 0.7s;
+}
+
+form input {
+    width: 100%;
+    height: 40px;
+    margin: 20px 0px;
+    padding: 0px 10px 0px 16px;
+    border-radius: 16px;
+    border: 1px solid #7F759A;
+    color: #7F759A;
+    font-size: 16px;
+}
+form input::placeholder{
+    color: #9b97a7a9;
+    
+}
+
+form .rememberMe input {
+    width: 16px;
+    height: 16px;
+    margin: 0px 0px 0px 6px;
+}
+
+form .rememberMe label {
+    display: inline-block;
+    position: relative;
+    left: 6px;
+    top: -2.5px;
+    font-size: 15px;
+}
+
+
+
+form input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    outline: 1px solid #8A6DF7;
+}
+
+input[type=checkbox]:checked {
+    accent-color: #8A6DF7;
+}
+
+form .button {
+    width: 100%;
+    height: 44px;
+    background-color: #fcfcfc;
+    border: 1px solid #8A6DF7;
+    color: #8A6DF7;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+form .button:hover {
+    background-color: #8A6DF7;
+    border: 1px solid #8A6DF7;
+    color: #fcfcfc;
+
+}
+
+#loginForm {
+    left: -500px;
+}
+
+#registerForm {
+    left: 0px;
+}
+
+form a {
+    font-size: 14px;
+    color: #8A6DF7;
+    text-decoration: underline;
+}
+
+form a:hover {
+    text-decoration: none;
+}

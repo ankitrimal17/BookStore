@@ -501,6 +501,7 @@ input[type="search"]::-webkit-search-cancel-button {
 #belowContainer{
     width: 100vw;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 
