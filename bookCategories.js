@@ -108,7 +108,7 @@ const genreBook = [
   {
     id: 33,
     dataName: "biography",
-    image: "BookImages/Elon-musk.png",
+    image: "BookImages/Elon-Musk.png",
     title: "Elon Musk",
     price: 2300.0,
   },
