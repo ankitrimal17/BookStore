@@ -151,7 +151,7 @@ const genreBook = [
     id: 39,
     dataName: "scifi",
     image: "BookGenre/SciFi/Jurassic-park.jpg",
-    title: "Everything I Know About Lo",
+    title: "Jurassic Park",
     price: 990.0,
   },
   {
