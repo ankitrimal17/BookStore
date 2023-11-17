@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account | Grantha Bookstore</title>
+    <title>Contact | Grantha Bookstore</title>
     <link rel="icon" href="LogoImages/iconlogo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="addtocart.css">
-    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="bookCategories.css">
+    <link rel="stylesheet" href="contact.css">
     <script src="https://kit.fontawesome.com/9459b328e4.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -28,7 +29,8 @@
                         <div class="elements">
                             <ul class="links">
                                 <li><a href="index.html">Home</a></li>
-                                <li id="dropdown" class="books-dropdown"><a href="bookCategories.html">Books<span class="arrow">&#9662;</span></a>
+                                <li id="dropdown" class="books-dropdown"><a href="bookCategories.html"
+                                        target="_blank">Books<span class="arrow">&#9662;</span></a>
                                     <ul id="booksHover">
                                         <div class="fiction">
                                             <p>Fiction</p>
@@ -68,15 +70,14 @@
                             </label>
                         </div>
                         <div class="accountIcon">
-                            <a href="account.html" target="_blank"><i class="fa-solid fa-user"></i>
-                                <span>Account</span></a>
+                            <a href="account.html" target="_blank"><i class="fa-solid fa-user"></i> <span>Account</span></a>
                         </div>
                     </div>
                     <div class="search-box">
                         <div class="search-form">
                             <form action="">
                                 <input type="search" id="searchBox" placeholder="Search...">
-                                <button class="searchBtn" style="position: static; margin-left: -4px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </div>
                     </div>
@@ -85,47 +86,13 @@
         </header>
 
 
-        <!-- account div  -->
-        <main>
-            <div class="container">
-                <div class="formBtn">
-                    <span onclick="login()">Login</span>
-                    <span onclick="register()">Register</span>
-                    <div id="indicator">
-                    </div>
-                </div>
+        <!-- categories div  -->
         
-                <form id="loginForm">
-                    <label for="lUsername">Username</label>
-                    <input type="text" placeholder="Username" id="lUsername">
-                    <label for="lPassword">Password</label>
-                    <input type="password" placeholder="Password" id="lPassword">
-                    <div class="rememberMe">
-                        <input type="checkbox" name="" id="rememberMe">
-                        <label for="rememberMe">Remember me</label>
-                    </div>
-                    <button type="submit" class="button" id="loginButton">
-                        Login</button><br>
-                    <a href="">Forgot Password</a>
-                </form>
-                <form id="registerForm">
-                    <label for="rUsername">Username</label>
-                    <input type="text" placeholder="Username" id="rUsername">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Email" id="email">
-                    <label for="rPassword">Password</label>
-                    <input type="password" placeholder="Password" id="rPassword">
-                    <button type="submit" class="button" id="registerButton">
-                        Register</button>
-                </form>
-        
-            </div>
-        </main>
 
 
 
 
-        
+
 
 
         <!-- top picks book container  -->
@@ -169,6 +136,23 @@
                 <button onclick="window.open('checkout.html', '_blank')">Checkout</button>
             </div>
         </div>
+
+
+        <!-- contact us div container  -->
+        <div class="contact-container">
+            <div class="contact-header">
+                <h3>Contact Us</h3>
+                <p>We would love to hear from you!</p>
+            </div>
+            <form action="" class="contact-form">
+                <input type="text" name="name" placeholder="Full Name">
+                <input type="email" name="email" placeholder="Email Address">
+                <input type="number" name="phonenumber" placeholder="Phone number">
+                <textarea name="message" id="" cols="15" rows="6" placeholder="Message"></textarea>
+                <button type="submit" class="contact-btn">Send</button>
+            </form>
+        </div>
+
 
 
 
@@ -253,6 +237,13 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
     </div>
 
 
@@ -274,24 +265,13 @@
     </div>
 
 
+
+
+
+    <script src="script.js"></script>
+    <script src="bookCategories.js"></script>
+
     <script>
-        var loginForm = document.getElementById("loginForm");
-        var registerForm = document.getElementById("registerForm");
-        var indicator = document.getElementById("indicator");
-
-        function register() {
-            registerForm.style.transform = "translateX(0px)";
-            loginForm.style.transform = "translateX(0px)";
-            indicator.style.transform = "translateX(0px)";
-        }
-
-        function login() {
-            registerForm.style.transform = "translateX(500px)";
-            loginForm.style.transform = "translateX(500px)";
-            indicator.style.transform = "translateX(-188px)";
-        }
-
-
         // Add click event listeners for each button of dropdown of books
             document
                 .getElementById("drop-mystery")
@@ -362,12 +342,7 @@
                     event.preventDefault();
                     openNewTabAndClickButton("truecrime-genre");
                 });
-
-        
     </script>
-    
-    <script src="script.js"></script>
-    <script src="bookCategories.js"></script>
 </body>
 
 </html>

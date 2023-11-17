@@ -108,25 +108,25 @@ const book = [
     price: 1120.0,
   },
   {
-    id: 12,
+    id: 14,
     image: "BookImages/The-Stranger.png",
     title: "The Stranger",
     price: 800.0,
   },
   {
-    id: 13,
+    id: 15,
     image: "BookImages/It-Ends-With-Us.png",
     title: "It Ends With Us",
     price: 800.0,
   },
   {
-    id: 12,
+    id: 16,
     image: "BookImages/Hooked.png",
     title: "Hooked",
     price: 1120.0,
   },
   {
-    id: 12,
+    id: 17,
     image: "BookImages/The-Secret-History.png",
     title: "The Secret History",
     price: 1120.0,
@@ -142,6 +142,7 @@ const categories = [
   ),
 ];
 let i = 0;
+
 document.querySelector(".book-container").innerHTML = categories
   .map((item) => {
     var { image, title, price } = item;
@@ -173,12 +174,14 @@ function addtocart(a) {
   cart.push({ ...categories[a] });
   displaycart();
 }
+
 function delElement(a) {
   cart.splice(a, 1);
   displaycart();
 }
 
 // Add an item to the cart and update localStorage
+
 function addtocart(a) {
   cart.push({ ...categories[a] });
   displaycart();
@@ -193,6 +196,19 @@ function delElement(a) {
   displaycart();
 
   // Update the cart in localStorage after removing an item
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function addGenreToCartById(id) {
+  // Find the item in genreBook with the matching id
+  const selectedItem = genreBook.find((item) => item.id === id);
+
+  // If the item exists, add it to the cart
+  cart.push({ ...selectedItem });
+  // Optionally, you can call the displaycart function to update the cart display
+  displaycart();
+
+  // Store the updated cart in localStorage
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
@@ -307,3 +323,143 @@ function adjustGenrePosition() {
     bookContainerHeight + 120
   }px`; // Set the margin dynamically
 }
+
+//javascript to open book genre in new tab
+function openNewTabAndClickButton(buttonId) {
+  // Open a new tab with hello.html
+  const newTab = window.open("bookCategories.html", "_blank");
+
+  // Wait for the new tab to finish loading before interacting with its content
+  newTab.onload = function () {
+    // Trigger a click on the specified button in hello.html
+    newTab.document.getElementById(buttonId).click();
+  };
+}
+
+// Add click event listeners for each button
+document.getElementById("mystery").addEventListener("click", function (event) {
+  event.preventDefault();
+  openNewTabAndClickButton("mystery-genre");
+});
+
+document.getElementById("romance").addEventListener("click", function (event) {
+  event.preventDefault();
+  openNewTabAndClickButton("romance-genre");
+});
+
+document.getElementById("scifi").addEventListener("click", function (event) {
+  event.preventDefault();
+  openNewTabAndClickButton("scifi-genre");
+});
+
+document.getElementById("fantasy").addEventListener("click", function (event) {
+  event.preventDefault();
+  openNewTabAndClickButton("fantasy-genre");
+});
+
+document
+  .getElementById("historyfi")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("historyfi-genre");
+  });
+
+document
+  .getElementById("biography")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("biography-genre");
+  });
+
+document.getElementById("history").addEventListener("click", function (event) {
+  event.preventDefault();
+  openNewTabAndClickButton("history-genre");
+});
+
+document.getElementById("selfhelp").addEventListener("click", function (event) {
+  event.preventDefault();
+  openNewTabAndClickButton("selfhelp-genre");
+});
+
+document.getElementById("finance").addEventListener("click", function (event) {
+  event.preventDefault();
+  openNewTabAndClickButton("finance-genre");
+});
+
+document
+  .getElementById("truecrime")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("truecrime-genre");
+  });
+
+// Add click event listeners for each button of dropdown of books
+document
+  .getElementById("drop-mystery")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("mystery-genre");
+  });
+
+document
+  .getElementById("drop-romance")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("romance-genre");
+  });
+
+document
+  .getElementById("drop-scifi")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("scifi-genre");
+  });
+
+document
+  .getElementById("drop-fantasy")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("fantasy-genre");
+  });
+
+document
+  .getElementById("drop-historyfi")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("historyfi-genre");
+  });
+
+document
+  .getElementById("drop-biography")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("biography-genre");
+  });
+
+document
+  .getElementById("drop-history")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("history-genre");
+  });
+
+document
+  .getElementById("drop-selfhelp")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("selfhelp-genre");
+  });
+
+document
+  .getElementById("drop-finance")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("finance-genre");
+  });
+
+document
+  .getElementById("drop-truecrime")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    openNewTabAndClickButton("truecrime-genre");
+  });

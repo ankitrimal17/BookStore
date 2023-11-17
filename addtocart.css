@@ -59,7 +59,10 @@
     height: 74%;
     overflow: auto;
 }
-
+.addToCart .cartProducts .cart-product-list{
+    display: flex;
+    flex-direction: column-reverse;
+}
 .addToCart .cartProducts .cart-product-detail {
     display: grid;
     grid-template-columns: 20% 68% 12%;

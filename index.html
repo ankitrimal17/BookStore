@@ -21,13 +21,32 @@
                     <!-- <input type="checkbox" class="checkbox" id="show-cart"> -->
                     <div class="content">
                         <div class="logo"><a href="index.html"><img src="LogoImages/logo.png" alt="Logo"></a></div>
-                        <div class="small-logo"><a href=""><img src="LogoImages/iconlogo.png" alt="Logo"></a></div>
+                        <div class="small-logo"><a href="index.html"><img src="LogoImages/iconlogo.png" alt="Logo"></a></div>
                         <div class="elements">
                             <ul class="links">
                                 <li><a href="index.html">Home</a></li>
-                                <li id="dropdown"><a href="">Books<span class="arrow">&#9662;</span></a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li id="dropdown" class="books-dropdown"><a href="bookCategories.html" target="_blank">Books<span class="arrow">&#9662;</span></a>
+                                    <ul id="booksHover">
+                                        <div class="fiction">
+                                            <p>Fiction</p>
+                                            <li id="drop-mystery"><a href="">Mystery</a></li>
+                                            <li id="drop-romance"><a href="">Romance</a></li>
+                                            <li id="drop-scifi"><a href="">Science Fiction</a></li>
+                                            <li id="drop-fantasy"><a href="">Fantasy</a></li>
+                                            <li id="drop-historyfi"><a href="">Historical Fiction</a></li>
+                                        </div>
+                                        <div class="non-fiction">
+                                            <p>Non Fiction</p>
+                                            <li id="drop-biography"><a href="">Biography</a></li>
+                                            <li id="drop-history"><a href="">History</a></li>
+                                            <li id="drop-selfhelp"><a href="">Self Help</a></li>
+                                            <li id="drop-finance"><a href="">Finance</a></li>
+                                            <li id="drop-truecrime"><a href="">True Crime</a></li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -85,7 +104,7 @@
                 <div class="browseBooksElements">
                     <h1>Find books of your favourite category.
                     </h1>
-                    <button>Browse Books &#8594</button>
+                    <button onclick="window.open('bookCategories.html', '_blank')">Browse Books &#8594</button>
                 </div>
             </div>
             <div class="slider-opacity-screen"></div>
@@ -167,16 +186,16 @@
                     <div id="headingLine"></div>
                 </div>
                 <div class="genre-list">
-                    <a class="genre-item" href="">Arts and Photography</a>
-                    <a class="genre-item" href="">Business and Investing</a>
-                    <a class="genre-item" href="">Fiction and Literature</a>
-                    <a class="genre-item" href="">History and Biography</a>
-                    <a class="genre-item" href="">Kids and Teens</a>
-                    <a class="genre-item" href="">Lifestyle and Wellness</a>
-                    <a class="genre-item" href="">Nature</a>
-                    <a class="genre-item" href="">Self Improvement</a>
-                    <a class="genre-item" href="">Spirituality and Philosophy</a>
-                    <a class="genre-item" href="">Technology</a>
+                    <a class="genre-item" id="mystery" href="">Mystery</a>
+                    <a class="genre-item" id="romance" href="">Romance</a>
+                    <a class="genre-item" id="scifi" href="">Science Fiction</a>
+                    <a class="genre-item" id="fantasy" href="">Fantasy</a>
+                    <a class="genre-item" id="historyfi" href="">Historical Fiction</a>
+                    <a class="genre-item" id="biography" href="">Biography/Memoir</a>
+                    <a class="genre-item" id="history" href="">History</a>
+                    <a class="genre-item" id="selfhelp" href="">Self Help</a>
+                    <a class="genre-item" id="finance" href="">Finance</a>
+                    <a class="genre-item" id="truecrime" href="">True Crime</a>
                 </div>
             </div>
 
@@ -226,11 +245,14 @@
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="account.html">Account</a></li>
-                                <li><a href="">Genre</a></li>
-                                <li><a href="">Gift Card</a></li>
-                                <li><a href="">About</a></li>
-                                <li><a href="">Contact</a></li>
-                                <li><a href="">Physical Location</a></li>
+                                <li><a href="bookCategories.html">Books</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li>
+                                    <a href="https://shorturl.at/deOR7" target="_blank">
+                                        Physical Location
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="footer-col">

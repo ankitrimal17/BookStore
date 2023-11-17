@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account | Grantha Bookstore</title>
+    <title>About | Grantha Bookstore</title>
     <link rel="icon" href="LogoImages/iconlogo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="addtocart.css">
-    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="bookCategories.css">
+    <link rel="stylesheet" href="about.css">
     <script src="https://kit.fontawesome.com/9459b328e4.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -24,11 +25,13 @@
                     <!-- <input type="checkbox" class="checkbox" id="show-cart"> -->
                     <div class="content">
                         <div class="logo"><a href="index.html"><img src="LogoImages/logo.png" alt="Logo"></a></div>
-                        <div class="small-logo"><a href="index.html"><img src="LogoImages/iconlogo.png" alt="Logo"></a></div>
+                        <div class="small-logo"><a href="index.html"><img src="LogoImages/iconlogo.png" alt="Logo"></a>
+                        </div>
                         <div class="elements">
                             <ul class="links">
                                 <li><a href="index.html">Home</a></li>
-                                <li id="dropdown" class="books-dropdown"><a href="bookCategories.html">Books<span class="arrow">&#9662;</span></a>
+                                <li id="dropdown" class="books-dropdown"><a href="bookCategories.html"
+                                        target="_blank">Books<span class="arrow">&#9662;</span></a>
                                     <ul id="booksHover">
                                         <div class="fiction">
                                             <p>Fiction</p>
@@ -76,7 +79,7 @@
                         <div class="search-form">
                             <form action="">
                                 <input type="search" id="searchBox" placeholder="Search...">
-                                <button class="searchBtn" style="position: static; margin-left: -4px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </div>
                     </div>
@@ -85,47 +88,13 @@
         </header>
 
 
-        <!-- account div  -->
-        <main>
-            <div class="container">
-                <div class="formBtn">
-                    <span onclick="login()">Login</span>
-                    <span onclick="register()">Register</span>
-                    <div id="indicator">
-                    </div>
-                </div>
-        
-                <form id="loginForm">
-                    <label for="lUsername">Username</label>
-                    <input type="text" placeholder="Username" id="lUsername">
-                    <label for="lPassword">Password</label>
-                    <input type="password" placeholder="Password" id="lPassword">
-                    <div class="rememberMe">
-                        <input type="checkbox" name="" id="rememberMe">
-                        <label for="rememberMe">Remember me</label>
-                    </div>
-                    <button type="submit" class="button" id="loginButton">
-                        Login</button><br>
-                    <a href="">Forgot Password</a>
-                </form>
-                <form id="registerForm">
-                    <label for="rUsername">Username</label>
-                    <input type="text" placeholder="Username" id="rUsername">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Email" id="email">
-                    <label for="rPassword">Password</label>
-                    <input type="password" placeholder="Password" id="rPassword">
-                    <button type="submit" class="button" id="registerButton">
-                        Register</button>
-                </form>
-        
-            </div>
-        </main>
+        <!-- categories div  -->
 
 
 
 
-        
+
+
 
 
         <!-- top picks book container  -->
@@ -169,6 +138,71 @@
                 <button onclick="window.open('checkout.html', '_blank')">Checkout</button>
             </div>
         </div>
+
+
+        <!-- about us div container  -->
+        <div class="about-container">
+            <div class="yourfav-container">
+                <h3>Your favourite online bookstore!</h3>
+                <p>At Grantha Bookstore, we embody everything you love about books. Our mission is to share the power of books and we connect
+                books with people by making discovering and buying books easy, entertaining, informative, and socially engaging.
+                Discover new books, browse and buy books online at the lowest everyday prices.</p>
+            </div>
+            <div class="ouraim">
+                <h3>Our Goal</h3>
+                <p>For our team, the aim is to create the largest community of book readers in Nepal. It is about helping to foster the
+                love of reading and supporting new authors and fellow-readers from all corners of the globe because we believe that
+                books have the power to transform the world around us. For our customers, we have tried to make Grantha Bookstore the
+                ultimate destination for book lovers by offering an array of book related content. With so many titles, it is vital to
+                give customers an easy way to find precisely the books they are looking for.</p>
+            </div>
+            <div class="ourservices">
+                <h3>Our Services</h3>
+                <div class="ourservices-container">
+                    <div class="ourservices-list">
+                        <div id="serviceIcon"><i class="fa-solid fa-globe"></i></div>
+                        <div id="service">
+                            <h4>Buy Books Online</h4>
+                            <p>Easily discover new reads and stock your shelves at the comforts of your home through our safe delivery system. We
+                            deliver worldwide and to all districts in Nepal.</p>
+                        </div>
+                    </div>
+                    <div class="ourservices-list">
+                        <div id="serviceIcon"><i class="fa-solid fa-book-medical"></i></div>
+                        <div id="service">
+                            <h4>Book Request</h4>
+                            <p>We also consider purchase requests for books that are not available with us. If any book you need is not in our
+                            collection, fill our book request form out and we'll try our best to help you get it.</p>
+                        </div>
+                    </div>
+                    <div class="ourservices-list">
+                        <div id="serviceIcon"><i class="fa-solid fa-star"></i></div>
+                        <div id="service">
+                            <h4>Inspirational Content</h4>
+                            <p>We believe in co-creation and providing value to our customers so you will find more that just product promotions on our
+                            website and socials. Find beautiful stacks of books, well written blogs, inspirational quotes and take-away points.</p>
+                        </div>
+                    </div>
+                    <div class="ourservices-list">
+                        <div id="serviceIcon"><i class="fa-solid fa-tag"></i></div>
+                        <div id="service">
+                            <h4>Deals and giveaways</h4>
+                            <p>Yes, it's possible to win free stuff and gift cards at Grantha Bookstore. Find the best bargains through our deals and get
+                            connected to discover quizzes, giveaways, contests and more!</p>
+                        </div>
+                    </div>
+                    <div class="ourservices-list">
+                        <div id="serviceIcon"><i class="fa-solid fa-bullhorn"></i></div>
+                        <div id="service">
+                            <h4>Promote Your Book</h4>
+                            <p>If you are an author, promoting and marketing your book is vital to success. We can help promote your book by providing
+                            the exposure it needs and connect you to hungry readers and book buyers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -253,6 +287,13 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
     </div>
 
 
@@ -274,100 +315,84 @@
     </div>
 
 
-    <script>
-        var loginForm = document.getElementById("loginForm");
-        var registerForm = document.getElementById("registerForm");
-        var indicator = document.getElementById("indicator");
-
-        function register() {
-            registerForm.style.transform = "translateX(0px)";
-            loginForm.style.transform = "translateX(0px)";
-            indicator.style.transform = "translateX(0px)";
-        }
-
-        function login() {
-            registerForm.style.transform = "translateX(500px)";
-            loginForm.style.transform = "translateX(500px)";
-            indicator.style.transform = "translateX(-188px)";
-        }
 
 
-        // Add click event listeners for each button of dropdown of books
-            document
-                .getElementById("drop-mystery")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("mystery-genre");
-                });
 
-            document
-                .getElementById("drop-romance")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("romance-genre");
-                });
-
-            document
-                .getElementById("drop-scifi")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("scifi-genre");
-                });
-
-            document
-                .getElementById("drop-fantasy")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("fantasy-genre");
-                });
-
-            document
-                .getElementById("drop-historyfi")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("historyfi-genre");
-                });
-
-            document
-                .getElementById("drop-biography")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("biography-genre");
-                });
-
-            document
-                .getElementById("drop-history")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("history-genre");
-                });
-
-            document
-                .getElementById("drop-selfhelp")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("selfhelp-genre");
-                });
-
-            document
-                .getElementById("drop-finance")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("finance-genre");
-                });
-
-            document
-                .getElementById("drop-truecrime")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("truecrime-genre");
-                });
-
-        
-    </script>
-    
     <script src="script.js"></script>
     <script src="bookCategories.js"></script>
+
+    <script>
+        // Add click event listeners for each button of dropdown of books
+        document
+            .getElementById("drop-mystery")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("mystery-genre");
+            });
+
+        document
+            .getElementById("drop-romance")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("romance-genre");
+            });
+
+        document
+            .getElementById("drop-scifi")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("scifi-genre");
+            });
+
+        document
+            .getElementById("drop-fantasy")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("fantasy-genre");
+            });
+
+        document
+            .getElementById("drop-historyfi")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("historyfi-genre");
+            });
+
+        document
+            .getElementById("drop-biography")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("biography-genre");
+            });
+
+        document
+            .getElementById("drop-history")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("history-genre");
+            });
+
+        document
+            .getElementById("drop-selfhelp")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("selfhelp-genre");
+            });
+
+        document
+            .getElementById("drop-finance")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("finance-genre");
+            });
+
+        document
+            .getElementById("drop-truecrime")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                openNewTabAndClickButton("truecrime-genre");
+            });
+    </script>
 </body>
 
 </html>

@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account | Grantha Bookstore</title>
+    <title>Books | Grantha Bookstore</title>
     <link rel="icon" href="LogoImages/iconlogo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="addtocart.css">
-    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="bookCategories.css">
     <script src="https://kit.fontawesome.com/9459b328e4.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
@@ -28,25 +28,10 @@
                         <div class="elements">
                             <ul class="links">
                                 <li><a href="index.html">Home</a></li>
-                                <li id="dropdown" class="books-dropdown"><a href="bookCategories.html">Books<span class="arrow">&#9662;</span></a>
-                                    <ul id="booksHover">
-                                        <div class="fiction">
-                                            <p>Fiction</p>
-                                            <li id="drop-mystery"><a href="">Mystery</a></li>
-                                            <li id="drop-romance"><a href="">Romance</a></li>
-                                            <li id="drop-scifi"><a href="">Science Fiction</a></li>
-                                            <li id="drop-fantasy"><a href="">Fantasy</a></li>
-                                            <li id="drop-historyfi"><a href="">Historical Fiction</a></li>
-                                        </div>
-                                        <div class="non-fiction">
-                                            <p>Non Fiction</p>
-                                            <li id="drop-biography"><a href="">Biography</a></li>
-                                            <li id="drop-history"><a href="">History</a></li>
-                                            <li id="drop-selfhelp"><a href="">Self Help</a></li>
-                                            <li id="drop-finance"><a href="">Finance</a></li>
-                                            <li id="drop-truecrime"><a href="">True Crime</a></li>
-                                        </div>
-                                    </ul>
+                                <li id="dropdown" class="books-dropdown">
+                                    <a href="bookCategories.html" class="current-tab">
+                                        Books<!--<span class="arrow">&#9662;</span>-->
+                                    </a>
                                 </li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
@@ -76,7 +61,7 @@
                         <div class="search-form">
                             <form action="">
                                 <input type="search" id="searchBox" placeholder="Search...">
-                                <button class="searchBtn" style="position: static; margin-left: -4px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </div>
                     </div>
@@ -85,47 +70,34 @@
         </header>
 
 
-        <!-- account div  -->
-        <main>
-            <div class="container">
-                <div class="formBtn">
-                    <span onclick="login()">Login</span>
-                    <span onclick="register()">Register</span>
-                    <div id="indicator">
-                    </div>
-                </div>
-        
-                <form id="loginForm">
-                    <label for="lUsername">Username</label>
-                    <input type="text" placeholder="Username" id="lUsername">
-                    <label for="lPassword">Password</label>
-                    <input type="password" placeholder="Password" id="lPassword">
-                    <div class="rememberMe">
-                        <input type="checkbox" name="" id="rememberMe">
-                        <label for="rememberMe">Remember me</label>
-                    </div>
-                    <button type="submit" class="button" id="loginButton">
-                        Login</button><br>
-                    <a href="">Forgot Password</a>
-                </form>
-                <form id="registerForm">
-                    <label for="rUsername">Username</label>
-                    <input type="text" placeholder="Username" id="rUsername">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Email" id="email">
-                    <label for="rPassword">Password</label>
-                    <input type="password" placeholder="Password" id="rPassword">
-                    <button type="submit" class="button" id="registerButton">
-                        Register</button>
-                </form>
-        
+        <!-- categories div  -->
+        <div class="genre-container">
+            <div class="filter-buttons">
+                <button data-name="allbooks" class="active-now">All Books</button>
+                <!-- fiction  -->
+                <button data-name="mystery" id="mystery-genre">Mystery</button>
+                <button data-name="romance"  id="romance-genre">Romance</button>
+                <button data-name="scifi"  id="scifi-genre">Science Fiction</button>
+                <button data-name="fantasy"  id="fantasy-genre">Fantasy</button>
+                <button data-name="historyfi"  id="historyfi-genre">Historical Fiction</button>
+                <!-- non-fiction  -->
+                <button data-name="biography"  id="biography-genre">Biography/Memoir</button>
+                <button data-name="history"  id="history-genre">History</button>
+                <button data-name="selfhelp"  id="selfhelp-genre">Self Help</button>
+                <button data-name="finance"  id="finance-genre">Finance</button>
+                <button data-name="truecrime"  id="truecrime-genre">True Crime</button>
             </div>
-        </main>
+            <div class="filter-book-container">
+                
+                
+            </div>
+            <!-- <div class="load-more-btn">Load More</div> -->
+        </div>
 
 
 
 
-        
+
 
 
         <!-- top picks book container  -->
@@ -253,6 +225,13 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
     </div>
 
 
@@ -274,98 +253,9 @@
     </div>
 
 
-    <script>
-        var loginForm = document.getElementById("loginForm");
-        var registerForm = document.getElementById("registerForm");
-        var indicator = document.getElementById("indicator");
-
-        function register() {
-            registerForm.style.transform = "translateX(0px)";
-            loginForm.style.transform = "translateX(0px)";
-            indicator.style.transform = "translateX(0px)";
-        }
-
-        function login() {
-            registerForm.style.transform = "translateX(500px)";
-            loginForm.style.transform = "translateX(500px)";
-            indicator.style.transform = "translateX(-188px)";
-        }
 
 
-        // Add click event listeners for each button of dropdown of books
-            document
-                .getElementById("drop-mystery")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("mystery-genre");
-                });
 
-            document
-                .getElementById("drop-romance")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("romance-genre");
-                });
-
-            document
-                .getElementById("drop-scifi")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("scifi-genre");
-                });
-
-            document
-                .getElementById("drop-fantasy")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("fantasy-genre");
-                });
-
-            document
-                .getElementById("drop-historyfi")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("historyfi-genre");
-                });
-
-            document
-                .getElementById("drop-biography")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("biography-genre");
-                });
-
-            document
-                .getElementById("drop-history")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("history-genre");
-                });
-
-            document
-                .getElementById("drop-selfhelp")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("selfhelp-genre");
-                });
-
-            document
-                .getElementById("drop-finance")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("finance-genre");
-                });
-
-            document
-                .getElementById("drop-truecrime")
-                .addEventListener("click", function (event) {
-                    event.preventDefault();
-                    openNewTabAndClickButton("truecrime-genre");
-                });
-
-        
-    </script>
-    
     <script src="script.js"></script>
     <script src="bookCategories.js"></script>
 </body>
